@@ -2,6 +2,5 @@
 set -e
 
 /opt/wait-for-it.sh mongo:27017
-cat .env
-npm run seed:run:document
+/opt/wait-for-it.sh redis:6379
 npm run start:prod
